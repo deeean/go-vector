@@ -5,9 +5,7 @@ import "math"
 const Epsilon = 0.00001
 
 type Vector3 struct {
-	X float64
-	Y float64
-	Z float64
+	X, Y, Z float64
 }
 
 func New(x float64, y float64, z float64) *Vector3 {
