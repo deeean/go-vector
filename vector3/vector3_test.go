@@ -126,11 +126,14 @@ func TestVector3_Magnitude(t *testing.T) {
 
 func TestVector3_Normalize(t *testing.T) {
 	a := New(3, 2, 3)
+	b := New(0.000003, 0.000002, 0.000003)
 	res := a.Normalize()
+	res2 := b.Normalize()
 
 	assert.Equal(t, res.X, 0.6396021490668313)
 	assert.Equal(t, res.Y, 0.42640143271122083)
 	assert.Equal(t, res.Z, 0.6396021490668313)
+	assert.True(t, b.Equals(res2))
 }
 
 func TestVector3_Lerp(t *testing.T) {
