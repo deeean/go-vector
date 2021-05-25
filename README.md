@@ -55,11 +55,15 @@ func (v *Vector3) SubScalars(x float64, y float64, z float64)
 
 func (v *Vector3) Mul(other *Vector3) *Vector3
 
-func (v *Vector3) MulByScalar(scalar float64) *Vector3
+func (v *Vector3) MulScalar(scalar float64) *Vector3
+
+func (v *Vector3) MulScalars(x float64, y float64, z float64) *Vector3
 
 func (v *Vector3) Div(other *Vector3) *Vector3
 
-func (v *Vector3) DivByScalar(scalar float64) *Vector3
+func (v *Vector3) DivScalar(scalar float64) *Vector3
+
+func (v *Vector3) DivScalars(x float64, y float64, z float64) *Vector3
 
 func (v *Vector3) Distance(other *Vector3) float64
 

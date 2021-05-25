@@ -87,16 +87,24 @@ func (v *Vector3) Mul(other *Vector3) *Vector3 {
 	return New(v.X*other.X, v.Y*other.Y, v.Z*other.Z)
 }
 
-func (v *Vector3) MulByScalar(scalar float64) *Vector3 {
+func (v *Vector3) MulScalar(scalar float64) *Vector3 {
 	return New(v.X*scalar, v.Y*scalar, v.Z*scalar)
+}
+
+func (v *Vector3) MulScalars(x float64, y float64, z float64) *Vector3 {
+	return New(v.X*x, v.Y*y, v.Z*z)
 }
 
 func (v *Vector3) Div(other *Vector3) *Vector3 {
 	return New(v.X/other.X, v.Y/other.Y, v.Z/other.Z)
 }
 
-func (v *Vector3) DivByScalar(scalar float64) *Vector3 {
+func (v *Vector3) DivScalar(scalar float64) *Vector3 {
 	return New(v.X/scalar, v.Y/scalar, v.Z/scalar)
+}
+
+func (v *Vector3) DivScalars(x float64, y float64, z float64) *Vector3 {
+	return New(v.X/x, v.Y/y, v.Z/z)
 }
 
 func (v *Vector3) Distance(other *Vector3) float64 {
@@ -134,7 +142,7 @@ func (v *Vector3) Normalize() *Vector3 {
 	m := v.Magnitude()
 
 	if m > Epsilon {
-		return v.DivByScalar(m)
+		return v.DivScalar(m)
 	} else {
 		return v.Copy()
 	}

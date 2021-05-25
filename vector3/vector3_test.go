@@ -97,14 +97,23 @@ func TestVector3_Mul(t *testing.T) {
 	assert.Equal(t, res.Z, 3.0)
 }
 
-func TestVector3_MulByScalar(t *testing.T) {
+func TestVector3_MulScalar(t *testing.T) {
 	a := New(1, 2, 3)
 	b := 4.0
-	res := a.MulByScalar(b)
+	res := a.MulScalar(b)
 
 	assert.Equal(t, res.X, 4.0)
 	assert.Equal(t, res.Y, 8.0)
 	assert.Equal(t, res.Z, 12.0)
+}
+
+func TestVector3_MulScalars(t *testing.T) {
+	a := New(1, 2, 3)
+	res := a.MulScalars(1.0, 2.0, 3.0)
+
+	assert.Equal(t, res.X, 1.0)
+	assert.Equal(t, res.Y, 4.0)
+	assert.Equal(t, res.Z, 9.0)
 }
 
 func TestVector3_Div(t *testing.T) {
@@ -117,14 +126,23 @@ func TestVector3_Div(t *testing.T) {
 	assert.Equal(t, res.Z, 3.0)
 }
 
-func TestVector3_DivByScalar(t *testing.T) {
+func TestVector3_DivScalar(t *testing.T) {
 	a := New(1, 2, 3)
 	b := 4.0
-	res := a.DivByScalar(b)
+	res := a.DivScalar(b)
 
 	assert.Equal(t, res.X, 0.25)
 	assert.Equal(t, res.Y, 0.5)
 	assert.Equal(t, res.Z, 0.75)
+}
+
+func TestVector3_DivScalars(t *testing.T) {
+	a := New(1, 2, 3)
+	res := a.DivScalars(1.0, 2.0, 3.0)
+
+	assert.Equal(t, res.X, 1.0)
+	assert.Equal(t, res.Y, 1.0)
+	assert.Equal(t, res.Z, 1.0)
 }
 
 func TestVector3_Distance(t *testing.T) {
