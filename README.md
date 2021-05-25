@@ -27,6 +27,16 @@ func main() {
 ```go
 func New(x float64, y float64, z float64) *Vector3
 
+func Dot(ihs *Vector3, rhs *Vector3) float64
+
+func Cross(ihs *Vector3, rhs *Vector3) *Vector3
+
+func Lerp(a *Vector3, b *Vector3, t float64) *Vector3
+
+func Distance(a *Vector3, b *Vector3) float64
+
+func Reflect(ihs *Vector3, rhs *Vector3) *Vector3
+
 func (v *Vector3) Copy() *Vector3
 
 func (v *Vector3) Set(x float64, y float64, z float64) *Vector3
