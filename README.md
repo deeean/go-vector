@@ -55,5 +55,7 @@ func (v *Vector3) Magnitude() float64
 
 func (v *Vector3) Normalize() *Vector3
 
+func (v *Vector3) Reflect(other *Vector3) *Vector3
+
 func (v *Vector3) Equals(other *Vector3) bool
 ```
