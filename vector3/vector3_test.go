@@ -136,6 +136,16 @@ func TestVector3_Normalize(t *testing.T) {
 	assert.True(t, b.Equals(res2))
 }
 
+func TestVector3_Reflect(t *testing.T) {
+	a := New(2, 1, 0)
+	b := New(6, 6, 6)
+	res := a.Reflect(b)
+
+	assert.Equal(t, res.X, -66.0)
+	assert.Equal(t, res.Y, -30.0)
+	assert.Equal(t, res.Z, 6.0)
+}
+
 func TestVector3_Lerp(t *testing.T) {
 	a := New(0, 0, 0)
 	b := New(10, 10, 10)
@@ -145,6 +155,7 @@ func TestVector3_Lerp(t *testing.T) {
 	assert.Equal(t, res.Y, 5.0)
 	assert.Equal(t, res.Z, 5.0)
 }
+
 
 func TestVector3_Equals(t *testing.T) {
 	a := New(5, 3, 5)

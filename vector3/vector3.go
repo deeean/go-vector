@@ -88,6 +88,13 @@ func (v *Vector3) Normalize() *Vector3 {
 	}
 }
 
+func (v *Vector3) Reflect(other *Vector3) *Vector3 {
+	factor := -2.0 * v.Dot(other);
+	return New(factor * v.X + other.X,
+		factor * v.Y + other.Y,
+		factor * v.Z + other.Z)
+}
+
 func (v *Vector3) Equals(other *Vector3) bool {
 	return v.X == other.X && v.Y == other.Y && v.Z == other.Z
 }
