@@ -41,6 +41,24 @@ func TestVector3_Add(t *testing.T) {
 	assert.Equal(t, res.Z, 4.0)
 }
 
+func TestVector3_AddScalar(t *testing.T) {
+	a := New(1, 2, 3)
+	res := a.AddScalar(1.0)
+
+	assert.Equal(t, res.X, 2.0)
+	assert.Equal(t, res.Y, 3.0)
+	assert.Equal(t, res.Z, 4.0)
+}
+
+func TestVector3_AddScalars(t *testing.T) {
+	a := New(1, 2, 3)
+	res := a.AddScalars(1, 2, 3)
+
+	assert.Equal(t, res.X, 2.0)
+	assert.Equal(t, res.Y, 4.0)
+	assert.Equal(t, res.Z, 6.0)
+}
+
 func TestVector3_Sub(t *testing.T) {
 	a := New(1, 2, 3)
 	b := New(4, 3, 1)
@@ -49,6 +67,24 @@ func TestVector3_Sub(t *testing.T) {
 	assert.Equal(t, res.X, -3.0)
 	assert.Equal(t, res.Y, -1.0)
 	assert.Equal(t, res.Z, 2.0)
+}
+
+func TestVector3_SubScalar(t *testing.T) {
+	a := New(1, 2, 3)
+	res := a.SubScalar(1.0)
+
+	assert.Equal(t, res.X, 0.0)
+	assert.Equal(t, res.Y, 1.0)
+	assert.Equal(t, res.Z, 2.0)
+}
+
+func TestVector3_SubScalars(t *testing.T) {
+	a := New(1, 2, 3)
+	res := a.SubScalars(1, 2, 3)
+
+	assert.Equal(t, res.X, 0.0)
+	assert.Equal(t, res.Y, 0.0)
+	assert.Equal(t, res.Z, 0.0)
 }
 
 func TestVector3_Mul(t *testing.T) {

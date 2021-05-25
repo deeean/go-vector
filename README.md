@@ -43,7 +43,15 @@ func (v *Vector3) Set(x float64, y float64, z float64) *Vector3
 
 func (v *Vector3) Add(other *Vector3) *Vector3
 
+func (v *Vector3) AddScalar(scalar float64) *Vector3
+
+func (v *Vector3) AddScalars(x float64, y float64, z float64) *Vector3
+
 func (v *Vector3) Sub(other *Vector3) *Vector3
+
+func (v *Vector3) SubScalar(scalar float64) *Vector3
+
+func (v *Vector3) SubScalars(x float64, y float64, z float64)
 
 func (v *Vector3) Mul(other *Vector3) *Vector3
 
