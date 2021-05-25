@@ -100,7 +100,7 @@ func TestVector3_Mul(t *testing.T) {
 func TestVector3_MulByScalar(t *testing.T) {
 	a := New(1, 2, 3)
 	b := 4.0
-	res := a.MulByScalar(b)
+	res := a.MulScalar(b)
 
 	assert.Equal(t, res.X, 4.0)
 	assert.Equal(t, res.Y, 8.0)
@@ -120,7 +120,7 @@ func TestVector3_Div(t *testing.T) {
 func TestVector3_DivByScalar(t *testing.T) {
 	a := New(1, 2, 3)
 	b := 4.0
-	res := a.DivByScalar(b)
+	res := a.DivScalar(b)
 
 	assert.Equal(t, res.X, 0.25)
 	assert.Equal(t, res.Y, 0.5)
