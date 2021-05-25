@@ -63,8 +63,24 @@ func (v *Vector3) Add(other *Vector3) *Vector3 {
 	return New(v.X+other.X, v.Y+other.Y, v.Z+other.Z)
 }
 
+func (v *Vector3) AddScalar(scalar float64) *Vector3 {
+	return New(v.X+scalar, v.Y+scalar, v.Z+scalar)
+}
+
+func (v *Vector3) AddScalars(x float64, y float64, z float64) *Vector3 {
+	return New(v.X+x, v.Y+y, v.Z+z)
+}
+
 func (v *Vector3) Sub(other *Vector3) *Vector3 {
 	return New(v.X-other.X, v.Y-other.Y, v.Z-other.Z)
+}
+
+func (v *Vector3) SubScalar(scalar float64) *Vector3 {
+	return New(v.X-scalar, v.Y-scalar, v.Z-scalar)
+}
+
+func (v *Vector3) SubScalars(x float64, y float64, z float64) *Vector3 {
+	return New(v.X-x, v.Y-y, v.Z-z)
 }
 
 func (v *Vector3) Mul(other *Vector3) *Vector3 {
