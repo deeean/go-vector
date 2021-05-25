@@ -156,10 +156,55 @@ func TestVector3_Lerp(t *testing.T) {
 	assert.Equal(t, res.Z, 5.0)
 }
 
-
 func TestVector3_Equals(t *testing.T) {
 	a := New(5, 3, 5)
 	b := New(4, 3, 3)
 
 	assert.False(t, a.Equals(b))
+}
+
+func TestDistance(t *testing.T) {
+	a := New(1, 2, 3)
+	b := New(4, 3, 1)
+	res := Distance(a, b)
+
+	assert.Equal(t, res, 3.7416573867739413)
+}
+
+func TestDot(t *testing.T) {
+	a := New(1, 2, 3)
+	b := New(4, 3, 1)
+	res := Dot(a, b)
+
+	assert.Equal(t, res, 13.0)
+}
+
+func TestCross(t *testing.T) {
+	a := New(1, 2, 3)
+	b := New(4, 3, 1)
+	res := Cross(a, b)
+
+	assert.Equal(t, res.X, -7.0)
+	assert.Equal(t, res.Y, 11.0)
+	assert.Equal(t, res.Z, -5.0)
+}
+
+func TestReflect(t *testing.T) {
+	a := New(2, 1, 0)
+	b := New(6, 6, 6)
+	res := Reflect(a, b)
+
+	assert.Equal(t, res.X, -66.0)
+	assert.Equal(t, res.Y, -30.0)
+	assert.Equal(t, res.Z, 6.0)
+}
+
+func TestLerp(t *testing.T) {
+	a := New(0, 0, 0)
+	b := New(10, 10, 10)
+	res := Lerp(a, b, 0.5)
+
+	assert.Equal(t, res.X, 5.0)
+	assert.Equal(t, res.Y, 5.0)
+	assert.Equal(t, res.Z, 5.0)
 }
