@@ -15,7 +15,7 @@ jobs:
           go-version: '1.16'
 
       - name: Run Test and Coverage
-        run: cd vector3 && go test -race -coverprofile=coverage.txt -covermode=atomic
+        run: go test ./vector2/ ./vector3/ -race -coverprofile=coverage.txt -covermode=atomic
 
       - name: Upload Coverage to Codecov
         run: bash <(curl -s https://codecov.io/bash)
