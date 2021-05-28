@@ -47,7 +47,7 @@ func TestVector2_AddScalar(t *testing.T) {
 
 func TestVector2_AddScalars(t *testing.T) {
 	a := New(1, 2)
-	res := a.AddScalars(1, 2, 3)
+	res := a.AddScalars(1, 2)
 
 	assert.Equal(t, res.X, 2.0)
 	assert.Equal(t, res.Y, 4.0)
@@ -72,7 +72,7 @@ func TestVector2_SubScalar(t *testing.T) {
 
 func TestVector2_SubScalars(t *testing.T) {
 	a := New(1, 2)
-	res := a.SubScalars(1, 2, 3)
+	res := a.SubScalars(1, 2)
 
 	assert.Equal(t, res.X, 0.0)
 	assert.Equal(t, res.Y, 0.0)
@@ -98,7 +98,7 @@ func TestVector2_MulScalar(t *testing.T) {
 
 func TestVector2_MulScalars(t *testing.T) {
 	a := New(1, 2)
-	res := a.MulScalars(1.0, 2.0, 3.0)
+	res := a.MulScalars(1.0, 2.0)
 
 	assert.Equal(t, res.X, 1.0)
 	assert.Equal(t, res.Y, 4.0)
@@ -124,7 +124,7 @@ func TestVector2_DivScalar(t *testing.T) {
 
 func TestVector2_DivScalars(t *testing.T) {
 	a := New(1, 2)
-	res := a.DivScalars(1.0, 2.0, 3.0)
+	res := a.DivScalars(1.0, 2.0)
 
 	assert.Equal(t, res.X, 1.0)
 	assert.Equal(t, res.Y, 1.0)
