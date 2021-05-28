@@ -55,7 +55,7 @@ func (v *Vector2) AddScalar(scalar float64) *Vector2 {
 	return New(v.X+scalar, v.Y+scalar)
 }
 
-func (v *Vector2) AddScalars(x float64, y float64, z float64) *Vector2 {
+func (v *Vector2) AddScalars(x float64, y float64) *Vector2 {
 	return New(v.X+x, v.Y+y)
 }
 
@@ -67,7 +67,7 @@ func (v *Vector2) SubScalar(scalar float64) *Vector2 {
 	return New(v.X-scalar, v.Y-scalar)
 }
 
-func (v *Vector2) SubScalars(x float64, y float64, z float64) *Vector2 {
+func (v *Vector2) SubScalars(x float64, y float64) *Vector2 {
 	return New(v.X-x, v.Y-y)
 }
 
@@ -79,7 +79,7 @@ func (v *Vector2) MulScalar(scalar float64) *Vector2 {
 	return New(v.X*scalar, v.Y*scalar)
 }
 
-func (v *Vector2) MulScalars(x float64, y float64, z float64) *Vector2 {
+func (v *Vector2) MulScalars(x float64, y float64) *Vector2 {
 	return New(v.X*x, v.Y*y)
 }
 
@@ -91,7 +91,7 @@ func (v *Vector2) DivScalar(scalar float64) *Vector2 {
 	return New(v.X/scalar, v.Y/scalar)
 }
 
-func (v *Vector2) DivScalars(x float64, y float64, z float64) *Vector2 {
+func (v *Vector2) DivScalars(x float64, y float64) *Vector2 {
 	return New(v.X/x, v.Y/y)
 }
 
