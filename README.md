@@ -27,6 +27,63 @@ func main() {
 ```
 
 ## Documentation
+
+### Vector2
+```go
+func New(x float64, y float64) *Vector2
+
+func Dot(ihs *Vector2, rhs *Vector2) float64
+
+func Lerp(a *Vector2, b *Vector2, t float64) *Vector2
+
+func Distance(a *Vector2, b *Vector2) float64
+
+func Reflect(ihs *Vector2, rhs *Vector2) *Vector2
+
+func (v *Vector2) Copy() *Vector2
+
+func (v *Vector2) Set(x float64, y float64) *Vector2
+
+func (v *Vector2) Add(other *Vector2) *Vector2
+
+func (v *Vector2) AddScalar(scalar float64) *Vector2
+
+func (v *Vector2) AddScalars(x float64, y float64, z float64) *Vector2
+
+func (v *Vector2) Sub(other *Vector2) *Vector2
+
+func (v *Vector2) SubScalar(scalar float64) *Vector2
+
+func (v *Vector2) SubScalars(x float64, y float64, z float64) *Vector2
+
+func (v *Vector2) Mul(other *Vector2) *Vector2
+
+func (v *Vector2) MulScalar(scalar float64) *Vector2
+
+func (v *Vector2) MulScalars(x float64, y float64, z float64) *Vector2
+
+func (v *Vector2) Div(other *Vector2) *Vector2
+
+func (v *Vector2) DivScalar(scalar float64) *Vector2
+
+func (v *Vector2) DivScalars(x float64, y float64, z float64) *Vector2
+
+func (v *Vector2) Distance(other *Vector2) float64
+
+func (v *Vector2) Dot(other *Vector2) float64
+
+func (v *Vector2) Lerp(other *Vector2, t float64) *Vector2
+
+func (v *Vector2) Magnitude() float64
+
+func (v *Vector2) Normalize() *Vector2
+
+func (v *Vector2) Reflect(other *Vector2) *Vector2
+
+func (v *Vector2) Equals(other *Vector2) bool
+```
+
+### Vector3
 ```go
 func New(x float64, y float64, z float64) *Vector3
 
