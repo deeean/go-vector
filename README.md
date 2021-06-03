@@ -3,7 +3,6 @@ Vector library for Go
 
 [![github-actions](https://github.com/KimByungChan/go-vector/actions/workflows/ci.yml/badge.svg)](https://github.com/KimByungChan/go-vector)
 [![codecov](https://codecov.io/gh/KimByungChan/go-vector/branch/master/graph/badge.svg?token=ITVBDT948V)](https://codecov.io/gh/KimByungChan/go-vector)
-[![codebeat badge](https://codebeat.co/badges/7e31dc28-717f-4c48-9bde-77da39859128)](https://codebeat.co/projects/github-com-kimbyungchan-go-vector-master)
 
 ## Installation
 ```shell
