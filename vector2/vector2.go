@@ -1,6 +1,9 @@
 package vector2
 
-import "math"
+import (
+	"fmt"
+	"math"
+)
 
 const Epsilon = 0.00001
 
@@ -136,4 +139,8 @@ func (v *Vector2) Reflect(other *Vector2) *Vector2 {
 
 func (v *Vector2) Equals(other *Vector2) bool {
 	return v.X == other.X && v.Y == other.Y
+}
+
+func (v *Vector2) ToString() string {
+	return fmt.Sprintf("Vector2(%f, %f)", v.X, v.Y)
 }

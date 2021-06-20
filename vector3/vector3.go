@@ -1,6 +1,9 @@
 package vector3
 
-import "math"
+import (
+	"fmt"
+	"math"
+)
 
 const Epsilon = 0.00001
 
@@ -159,4 +162,8 @@ func (v *Vector3) Reflect(other *Vector3) *Vector3 {
 
 func (v *Vector3) Equals(other *Vector3) bool {
 	return v.X == other.X && v.Y == other.Y && v.Z == other.Z
+}
+
+func (v *Vector3) ToString() string {
+	return fmt.Sprintf("Vector3(%f, %f, %f)", v.X, v.Y, v.Z)
 }

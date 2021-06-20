@@ -1,6 +1,7 @@
 package vector3
 
 import (
+	"fmt"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
@@ -215,6 +216,11 @@ func TestVector3_Equals(t *testing.T) {
 	b := New(4, 3, 3)
 
 	assert.False(t, a.Equals(b))
+}
+
+func TestVector2_ToString(t *testing.T) {
+	a := New(3, 6, 2)
+	assert.Equal(t, a.ToString(), fmt.Sprintf("Vector3(%f, %f, %f)", a.X, a.Y, a.Z))
 }
 
 func TestDistance(t *testing.T) {
