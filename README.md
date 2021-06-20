@@ -80,6 +80,8 @@ func (v *Vector2) Normalize() *Vector2
 func (v *Vector2) Reflect(other *Vector2) *Vector2
 
 func (v *Vector2) Equals(other *Vector2) bool
+
+func (v *Vector2) ToString() string
 ```
 
 ### Vector3
@@ -139,4 +141,6 @@ func (v *Vector3) Normalize() *Vector3
 func (v *Vector3) Reflect(other *Vector3) *Vector3
 
 func (v *Vector3) Equals(other *Vector3) bool
+
+func (v *Vector3) ToString() string
 ```
