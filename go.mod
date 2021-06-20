@@ -1,4 +1,4 @@
-module github.com/KimByungChan/go-vector
+module github.com/deeean/go-vector
 
 go 1.16
 
