@@ -19,9 +19,17 @@ import (
 )
 
 func main() {
+	// basic usage
 	a := vector3.New(1, 2, 3)
 	b := vector3.New(1, 2, 3)
 	fmt.Println(a.Add(b))
+
+	// method chaining
+	c := vector3.New(0, 3, 5).
+		DivScalars(1, 2, 4).
+		MulScalars(0, 5, 3).
+		Magnitude()
+	fmt.Println(c)
 }
 ```
 
