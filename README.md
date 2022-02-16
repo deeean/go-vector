@@ -1,8 +1,8 @@
 # go-vector
 A Vector library for 2D and 3D applications.
 
-[![github-actions](https://github.com/deeean/go-vector/actions/workflows/ci.yml/badge.svg)](https://github.com/KimByungChan/go-vector)
-[![codecov](https://codecov.io/gh/deeean/go-vector/branch/master/graph/badge.svg?token=ITVBDT948V)](https://codecov.io/gh/KimByungChan/go-vector)
+[![github-actions](https://github.com/deeean/go-vector/actions/workflows/ci.yml/badge.svg)](https://github.com/deeean/go-vector)
+[![codecov](https://codecov.io/gh/deeean/go-vector/branch/master/graph/badge.svg?token=ITVBDT948V)](https://codecov.io/gh/deeean/go-vector)
 
 ## Installation
 ```shell
