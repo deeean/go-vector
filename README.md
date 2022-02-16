@@ -6,7 +6,7 @@ A Vector library for 2D and 3D applications.
 
 ## Installation
 ```shell
-go get -u github.com/deeean/go-vector
+go get -u github.com/deeean/go-vector/[vector3|vector2]
 ```
 
 ## Usage
