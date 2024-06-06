@@ -5,8 +5,6 @@ import (
 	"math"
 )
 
-const Epsilon = 0.00001
-
 type Vector3 struct {
 	X, Y, Z float64
 }
@@ -144,7 +142,7 @@ func (v *Vector3) Magnitude() float64 {
 func (v *Vector3) Normalize() *Vector3 {
 	m := v.Magnitude()
 
-	if m > Epsilon {
+	if m > 0.0 {
 		return v.DivScalar(m)
 	} else {
 		return v.Copy()
@@ -164,6 +162,6 @@ func (v *Vector3) Equals(other *Vector3) bool {
 	return v.X == other.X && v.Y == other.Y && v.Z == other.Z
 }
 
-func (v *Vector3) ToString() string {
+func (v *Vector3) String() string {
 	return fmt.Sprintf("Vector3(%f, %f, %f)", v.X, v.Y, v.Z)
 }

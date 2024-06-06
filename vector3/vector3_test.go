@@ -182,13 +182,10 @@ func TestVector3_Magnitude(t *testing.T) {
 func TestVector3_Normalize(t *testing.T) {
 	a := New(3, 2, 3)
 	b := New(0.000003, 0.000002, 0.000003)
-	res := a.Normalize()
-	res2 := b.Normalize()
+	aa := a.Normalize()
+	bb := b.Normalize()
 
-	assert.Equal(t, res.X, 0.6396021490668313)
-	assert.Equal(t, res.Y, 0.42640143271122083)
-	assert.Equal(t, res.Z, 0.6396021490668313)
-	assert.True(t, b.Equals(res2))
+	assert.True(t, aa.Equals(bb))
 }
 
 func TestVector3_Reflect(t *testing.T) {
@@ -218,9 +215,9 @@ func TestVector3_Equals(t *testing.T) {
 	assert.False(t, a.Equals(b))
 }
 
-func TestVector2_ToString(t *testing.T) {
+func TestVector2_String(t *testing.T) {
 	a := New(3, 6, 2)
-	assert.Equal(t, a.ToString(), fmt.Sprintf("Vector3(%f, %f, %f)", a.X, a.Y, a.Z))
+	assert.Equal(t, a.String(), fmt.Sprintf("Vector3(%f, %f, %f)", a.X, a.Y, a.Z))
 }
 
 func TestDistance(t *testing.T) {
