@@ -10,9 +10,10 @@ jobs:
         with:
           fetch-depth: 2
 
-      - uses: actions/setup-go@v2
+      - uses: actions/setup-go@v5
         with:
-          go-version: '1.16'
+          go-version-file: 'go.mod'
+          cache: true
 
       - name: Run Test and Coverage
         run: go test ./vector2/ ./vector3/ -race -coverprofile=coverage.txt -covermode=atomic
