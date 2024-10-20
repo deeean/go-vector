@@ -19,4 +19,7 @@ jobs:
         run: go test ./vector2/ ./vector3/ -race -coverprofile=coverage.txt -covermode=atomic
 
       - name: Upload Coverage to Codecov
-        run: bash <(curl -s https://codecov.io/bash)
+        uses: codecov/codecov-action@v4
+        with:
+          fail_ci_if_error: true
+          verbose: true
