@@ -6,16 +6,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 2
 
-      - uses: actions/setup-go@v2
+      - uses: actions/setup-go@v5
         with:
-          go-version: '1.16'
+          go-version-file: 'go.mod'
+          cache: true
 
       - name: Run Test and Coverage
         run: go test ./vector2/ ./vector3/ -race -coverprofile=coverage.txt -covermode=atomic
 
       - name: Upload Coverage to Codecov
-        run: bash <(curl -s https://codecov.io/bash)
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
+          verbose: true
