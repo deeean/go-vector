@@ -77,6 +77,8 @@ func (v *Vector2) DivScalars(x float64, y float64) *Vector2
 
 func (v *Vector2) Distance(other *Vector2) float64
 
+func (v *Vector2) Cross(other *Vector2) float64
+
 func (v *Vector2) Dot(other *Vector2) float64
 
 func (v *Vector2) Lerp(other *Vector2, t float64) *Vector2
