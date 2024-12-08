@@ -2,8 +2,9 @@ package vector2
 
 import (
 	"fmt"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestNew(t *testing.T) {
@@ -137,6 +138,14 @@ func TestVector2_Distance(t *testing.T) {
 	res := a.Distance(b)
 
 	assert.Equal(t, res, 3.1622776601683795)
+}
+
+func TestVector2_Cross(t *testing.T) {
+	a := New(1, 2)
+	b := New(4, 3)
+	res := a.Cross(b)
+
+	assert.Equal(t, res, -5.0)
 }
 
 func TestVector2_Dot(t *testing.T) {
