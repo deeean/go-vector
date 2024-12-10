@@ -102,6 +102,10 @@ func (v *Vector2) Distance(other *Vector2) float64 {
 	return math.Sqrt(dx*dx + dy*dy)
 }
 
+func (v *Vector2) Cross(other *Vector2) float64 {
+	return v.X*other.Y - v.Y*other.X
+}
+
 func (v *Vector2) Dot(other *Vector2) float64 {
 	return v.X*other.X + v.Y*other.Y
 }
